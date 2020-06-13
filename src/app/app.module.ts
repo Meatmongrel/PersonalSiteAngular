@@ -1,16 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { AboutComponent } from "./components/about/about.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
+import { ContactComponent } from "./components/contact/contact.component";
+import { HomeComponent } from "./components/home/home.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    ProjectsComponent,
+    ContactComponent,
+    HomeComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, MatSidenavModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

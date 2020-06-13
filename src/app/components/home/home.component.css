@@ -1,0 +1,38 @@
+#container {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  text-align: center;
+  background: url("../../../assets/river.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#content {
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 10rem 3rem;
+  margin-top: -10vh;
+  background: rgba(51, 102, 51, 0.801);
+}
+
+#title {
+  text-shadow: 2px 1px 0px rgb(255, 255, 255);
+  color: black;
+  font-size: 3.5rem;
+}
+
+#header-links {
+  font-size: 4rem;
+}
+
+i {
+  padding: 0 1vw;
+  color: white;
+  transition: 0.15s;
+}
+
+i:hover {
+  text-shadow: 4px 4px 0px black;
+}
