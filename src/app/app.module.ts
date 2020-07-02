@@ -8,6 +8,7 @@ import { AboutComponent } from "./components/about/about.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { HomeComponent } from "./components/home/home.component";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,12 @@ import { HomeComponent } from "./components/home/home.component";
     ContactComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, MatSidenavModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatTooltipModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

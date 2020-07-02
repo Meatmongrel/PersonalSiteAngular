@@ -1,15 +1,25 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild, AfterViewInit } from "@angular/core";
+import { HomeComponent } from "./components/home/home.component";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+  @ViewChild(HomeComponent, { static: false }) home: HomeComponent;
+
+  ngAfterViewInit() {}
+
   homeShown: boolean = true;
   aboutShown: boolean = false;
   projectsShown: boolean = false;
   contactShown: boolean = false;
+
+  arrowToAbout() {
+    if (this.home && this.home.toAbout != undefined)
+      this.showGivenPage(this.home.toAbout);
+  }
 
   showGivenPage = (page) => {
     this.homeShown = false;

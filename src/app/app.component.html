@@ -10,7 +10,7 @@
     </mat-sidenav>
     <mat-sidenav-content id="list-container">
       <ng-container *ngIf="homeShown">
-        <app-home></app-home>
+        <app-home (click)="arrowToAbout()"></app-home>
       </ng-container>
       <ng-container *ngIf="aboutShown">
         <app-about></app-about>

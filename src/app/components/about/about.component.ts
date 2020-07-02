@@ -1,15 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostBinding,
+  AfterViewInit,
+  Host,
+} from "@angular/core";
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  stagger,
+  query,
+  group,
+} from "@angular/animations";
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: "app-about",
+  animations: [
+    trigger("slideIn", [
+      transition(":enter", [
+        query("#span1, #span3", [
+          style({ opacity: 0, transform: "translateX(-50vw)" }),
+          animate("1.2s ease", style({ opacity: 1, transform: "none" })),
+        ]),
+      ]),
+    ]),
+    trigger("slideOn", [
+      transition(":enter", [
+        query("#span2", [
+          style({ opacity: 0, transform: "translateX(50vw)" }),
+          animate("1.2s ease", style({ opacity: 1, transform: "none" })),
+        ]),
+      ]),
+    ]),
+  ],
+  templateUrl: "./about.component.html",
+  styleUrls: ["./about.component.css"],
 })
-export class AboutComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class AboutComponent implements AfterViewInit {
+  @HostBinding("@slideIn")
+  @HostBinding("@slideOn")
+  ngAfterViewInit() {}
 }
