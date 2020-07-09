@@ -49,3 +49,14 @@
   border-color: white;
   box-shadow: 0px 0px 5px white;
 }
+
+@media screen and (max-width: 1280px){
+  .fa-home{
+    font-size: 2.4rem;
+    /* padding-left: 1.6vw; */
+  }
+  .nav-item{
+    padding: 12vh 1vw;
+    font-size: 1rem;
+  }
+}
