@@ -1,13 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+#background {
+  height: 100%;
+  width: 100%;
+  background: url("../../../assets/trees.jpg");
+  background-size: cover;
+}
 #container {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.452);
+  color: white;
+  /* background: linear-gradient(45deg, #385223, #699941); */
+}
+
+#title {
+  color: white;
+  font-family: "Merriweather", serif;
+  font-size: 3.3rem;
+  margin-right: 3vw;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
+hr {
+  margin: 0;
+  margin-right: 8vw;
+  height: 70px;
+  line-height: 10%;
+  border: 1px solid white;
+  transform: scaleY(0);
+  animation: grow 1.2s ease-in-out;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  /* box-sizing: border-box;
+  box-shadow: none; */
 }
 span {
   display: inline-block;
 }
 p {
   width: 50%;
+  padding: 1rem;
+  border-radius: 1%;
+  animation: bgFade 1.2s ease;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  background-origin: border-box;
+}
+a:visited {
+  color: rgb(194, 41, 41);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes bgFade {
+  from {
+    /* box-shadow: none; */
+    background-color: none;
+  }
+  to {
+    /* box-shadow: 2px 2px 5px black; */
+    background-color: rgba(0, 0, 0, 0.411);
+  }
 }

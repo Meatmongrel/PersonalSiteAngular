@@ -19,33 +19,12 @@
   background: #385223c4;
 }
 
-/* @keyframes text {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes cursor {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: black;
-  }
-} */
-
 #title {
   text-shadow: 2px 2px 0px rgb(255, 255, 255);
   color: black;
   font-family: "Merriweather", serif;
   font-size: 3.3rem;
-  overflow: hidden;
   white-space: nowrap;
-  /* animation: 2s text steps(60, end), cursor 1s step-end infinite; */
   border-right: 1px solid transparent;
 }
 
@@ -80,17 +59,17 @@
   font-size: 16px;
 }
 
-@media screen and (max-width: 1280px){
-  #content{
+@media screen and (max-width: 1280px) {
+  #content {
     padding: 8rem 2rem;
   }
-  #title{
+  #title {
     font-size: 2.5rem;
   }
-  #header-links{
+  #header-links {
     font-size: 3rem;
   }
-  .down{
+  .down {
     font-size: 5rem;
     margin-top: 27vh;
   }

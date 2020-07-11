@@ -35,6 +35,11 @@ import {
         ]),
       ]),
     ]),
+    // trigger("fadeIn", [
+    //   state("inactive", style({ opacity: 0 })),
+    //   state("active", style({ opacity: 1 })),
+    //   transition("* => *", [query("#title", [animate("1.2s ease")])]),
+    // ]),
   ],
   templateUrl: "./about.component.html",
   styleUrls: ["./about.component.css"],
@@ -42,5 +47,17 @@ import {
 export class AboutComponent implements AfterViewInit {
   @HostBinding("@slideIn")
   @HostBinding("@slideOn")
-  ngAfterViewInit() {}
+  // @HostBinding("@fadeIn")
+  animationState: string = "inactive";
+  ngAfterViewInit() {
+    this.triggerAnimation();
+  }
+
+  triggerAnimation = () => {
+    console.log("fired", this.animationState);
+    setTimeout(function () {
+      this.animationState = "active";
+      console.log(this.animationState);
+    }, 1200);
+  };
 }
