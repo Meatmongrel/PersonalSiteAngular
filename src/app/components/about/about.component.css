@@ -52,8 +52,9 @@ p {
   animation-fill-mode: forwards;
   background-origin: border-box;
 }
+a,
 a:visited {
-  color: rgb(194, 41, 41);
+  color: rgb(190, 22, 22);
 }
 @keyframes fadeIn {
   from {

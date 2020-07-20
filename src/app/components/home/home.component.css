@@ -45,7 +45,7 @@
 .down {
   color: rgb(0, 0, 0);
   font-size: 6rem;
-  margin-top: 35vh;
+  margin-top: 30vmin;
   transition: 0.15s;
   text-shadow: 0px 0px 3px white;
 }
