@@ -5,6 +5,7 @@ import {
   HostBinding,
   Output,
   Input,
+  ViewChild,
 } from "@angular/core";
 import {
   trigger,
@@ -16,6 +17,8 @@ import {
   query,
 } from "@angular/animations";
 import { EventEmitter } from "@angular/core";
+import { MatSidenav } from "@angular/material";
+import { SidenavService } from "src/services/sidenavService";
 
 @Component({
   selector: "app-home",
@@ -42,17 +45,21 @@ import { EventEmitter } from "@angular/core";
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"],
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent {
   @HostBinding("@slideIn")
   @HostBinding("@slideUp")
   @Input()
+  @Output()
+  event: EventEmitter<any> = new EventEmitter();
   toAbout: string;
-  @Output() aboutShown: EventEmitter<string> = new EventEmitter();
 
-  ngAfterViewInit() {}
+  constructor(public sidenav: SidenavService) {}
+  toggle() {
+    this.sidenav.toggle();
+  }
 
   goToAbout() {
     this.toAbout = "about";
-    this.aboutShown.emit(this.toAbout);
+    this.event.emit(this.toAbout);
   }
 }

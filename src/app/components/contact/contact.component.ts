@@ -8,6 +8,7 @@ import {
   stagger,
   query,
 } from "@angular/animations";
+import { SidenavService } from "src/services/sidenavService";
 
 @Component({
   selector: "app-contact",
@@ -26,7 +27,10 @@ import {
   templateUrl: "./contact.component.html",
   styleUrls: ["./contact.component.css"],
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
+  constructor(public sidenav: SidenavService) {}
   @HostBinding("@grow")
-  ngOnInit() {}
+  toggle() {
+    this.sidenav.toggle();
+  }
 }

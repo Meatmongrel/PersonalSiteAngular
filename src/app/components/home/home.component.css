@@ -28,6 +28,26 @@
   border-right: 1px solid transparent;
 }
 
+#menuToggle {
+  align-self: flex-start;
+  margin: 3% 3%;
+  padding: 1vmin 1.25vmin;
+  color: white;
+  font-size: 3rem;
+  transition: 0.15s;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+#menuToggle:hover {
+  cursor: pointer;
+  border-color: white;
+}
+
 #header-links {
   font-size: 4rem;
 }
@@ -72,5 +92,17 @@
   .down {
     font-size: 5rem;
     margin-top: 27vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menuToggle {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #content {
+    margin-top: 0;
   }
 }

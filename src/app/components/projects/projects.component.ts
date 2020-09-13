@@ -9,6 +9,7 @@ import {
   query,
   group,
 } from "@angular/animations";
+import { SidenavService } from "src/services/sidenavService";
 
 @Component({
   selector: "app-projects",
@@ -27,8 +28,10 @@ import {
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.css"],
 })
-export class ProjectsComponent implements OnInit {
-  constructor() {}
+export class ProjectsComponent {
+  constructor(public sidenav: SidenavService) {}
   @HostBinding("@slideIn")
-  ngOnInit() {}
+  toggle() {
+    this.sidenav.toggle();
+  }
 }

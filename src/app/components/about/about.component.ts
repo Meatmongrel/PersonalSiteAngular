@@ -15,6 +15,7 @@ import {
   query,
   group,
 } from "@angular/animations";
+import { SidenavService } from "src/services/sidenavService";
 
 @Component({
   selector: "app-about",
@@ -35,29 +36,17 @@ import {
         ]),
       ]),
     ]),
-    // trigger("fadeIn", [
-    //   state("inactive", style({ opacity: 0 })),
-    //   state("active", style({ opacity: 1 })),
-    //   transition("* => *", [query("#title", [animate("1.2s ease")])]),
-    // ]),
   ],
   templateUrl: "./about.component.html",
   styleUrls: ["./about.component.css"],
 })
 export class AboutComponent implements AfterViewInit {
+  constructor(public sidenav: SidenavService) {}
   @HostBinding("@slideIn")
   @HostBinding("@slideOn")
-  // @HostBinding("@fadeIn")
-  animationState: string = "inactive";
-  ngAfterViewInit() {
-    this.triggerAnimation();
+  toggle() {
+    this.sidenav.toggle();
   }
 
-  triggerAnimation = () => {
-    console.log("fired", this.animationState);
-    setTimeout(function () {
-      this.animationState = "active";
-      console.log(this.animationState);
-    }, 1200);
-  };
+  ngAfterViewInit() {}
 }

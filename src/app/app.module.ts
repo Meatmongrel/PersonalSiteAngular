@@ -9,6 +9,8 @@ import { ProjectsComponent } from "./components/projects/projects.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { HomeComponent } from "./components/home/home.component";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { SidenavService } from "src/services/sidenavService";
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     ProjectsComponent,
     ContactComponent,
     HomeComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     MatSidenavModule,
     MatTooltipModule,
   ],
-  providers: [],
+  providers: [SidenavService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -25,7 +25,7 @@
 }
 
 #contact-info {
-  font-size: 2.5vmin;
+  font-size: 1.5rem;
   justify-content: center;
   text-align: center;
   margin-top: 15vmin;
@@ -38,13 +38,37 @@
   animation: fadeIn 1.2s ease 1 running forwards;
 }
 
+#menuToggle {
+  align-self: flex-start;
+  margin: 3% 3%;
+  padding: 1vmin 1.25vmin;
+  color: white;
+  font-size: 3rem;
+  transition: 0.15s;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#menuToggle:hover {
+  cursor: pointer;
+  border-color: white;
+}
+
 i {
-  font-size: 5vmin;
+  font-size: 3rem;
 }
 
 a,
 a:visited {
   color: rgb(190, 22, 22);
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: rgb(109, 21, 21);
 }
 
 @keyframes fadeIn {
@@ -53,5 +77,29 @@ a:visited {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menuToggle {
+    font-size: 2rem;
+  }
+  #title {
+    font-size: 2.5rem;
+  }
+  #contact-info {
+    font-size: 1rem;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #contact-info {
+    font-size: 1.3rem;
+  }
+  i {
+    font-size: 1.8rem;
   }
 }
