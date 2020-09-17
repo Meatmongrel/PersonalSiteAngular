@@ -99,6 +99,10 @@
   #menuToggle {
     font-size: 2rem;
   }
+
+  .down {
+    margin-top: 22vh;
+  }
 }
 
 @media screen and (max-width: 450px) {

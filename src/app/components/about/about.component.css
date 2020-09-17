@@ -107,15 +107,16 @@ a:visited {
   }
   #title {
     font-size: 2.5rem;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
   }
   hr {
     visibility: hidden;
+    margin: 0;
   }
   p {
     width: 66%;
-    margin-top: 2vmin;
+    margin-top: -7vmin;
     font-size: 0.8em;
   }
 }
